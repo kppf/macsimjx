@@ -1,0 +1,48 @@
+<html>  <head>  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Model Advisor Report for 'BoeingFigure8'</title>  
+<style>  
+H3 {font-size:14pt; font-weight:200;}  
+H4 {font-size:9pt; font-weight:normal;}  
+
+</style>  
+</head>  
+<body>  
+<H3 align="center">Model Advisor Report for 'BoeingFigure8'</H3>  
+<H4 align="center"><I>Model version: 1.313</I></H4>  <H4 align="center"><I>Generated on: 18-Apr-2007 12:46:24</I></H4>  <!-- Compile Status Flag --><p><hr></p>  <A NAME="CheckRecord_1"</A><font size=+1><b>Check model, local libraries, and referenced models for known upgrade issues</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_2"</A><font size=+1><b>Identify unconnected lines, input ports, and output ports</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_3"</A><font size=+1><b>Check root model Inport block specifications</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_4"</A><font size=+1><b>Check solver for code generation</b></font>
+<p><p>Your model specifies a <a href="matlab: modeladvisorprivate openSimprmAdvancedPage BoeingFigure8 Solver"> variable step solver</a> (ode23).  If you want to generate code from this model, using the Real-Time Workshop Embedded Coder, you must first change its <b>Solver</b> configuration parameter setting to specify a fixed-step, discrete solver.<p>Note that you do not have to change the solver setting to generate code from one of the model's subsystems. This is because the Real-Time Workshop Embedded Coder changes the setting to a fixed-step solverfor you when you select <b>Real-Time Workshop>Build Subsystem</b> from the subsystem's context menu.</p><p>Consider setting <a href="matlab: modeladvisorprivate openSimprmAdvancedPage BoeingFigure8 'Sample Time'"> Multitask conditionally executed subsystem</a> to error.<p>Consider setting <a href="matlab: modeladvisorprivate openSimprmAdvancedPage BoeingFigure8 'Data Validity'"> Multitask data store</a> to error.
+<p><hr></p>  <A NAME="CheckRecord_5"</A><font size=+1><b>Identify questionable blocks within the specified system</b></font>
+<p><p>Check for Gain blocks whose value equals 1. If you are using these blocks as buffers, you should replace them with Signal Conversion blocks.<p><p><a href="matlab: modeladvisorprivate hiliteSystem BoeingFigure8 1">BoeingFigure8/Boeing flying
+figure of 8/DT-B1/ *1</a><p><a href="matlab: modeladvisorprivate hiliteSystem BoeingFigure8 2">BoeingFigure8/Boeing flying
+figure of 8/DT-B1/*1</a><p><a href="matlab: modeladvisorprivate hiliteSystem BoeingFigure8 3">BoeingFigure8/Boeing flying
+figure of 8/DT-B1/eqm/ *1</a><p><a href="matlab: modeladvisorprivate hiliteSystem BoeingFigure8 4">BoeingFigure8/Boeing flying
+figure of 8/DT-B1/eqm/*1</a><p><a href="matlab: modeladvisorprivate hiliteSystem BoeingFigure8 5">BoeingFigure8/Magnetometer/Scale factor error</a><p><a href="matlab: modeladvisorprivate hiliteSystem BoeingFigure8 6">BoeingFigure8/Magnetometer1/Scale factor error</a><p><a href="matlab: modeladvisorprivate hiliteSystem BoeingFigure8 7">BoeingFigure8/Rate Gyro1/Scale factor error</a><p><a href="matlab: modeladvisorprivate hiliteSystem BoeingFigure8 8">BoeingFigure8/Rate Gyro2/Scale factor error</a>
+<p><hr></p>  <A NAME="CheckRecord_6"</A><font size=+1><b>Check for model reference configuration mismatch</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_7"</A><font size=+1><b>Check the hardware implementation</b></font>
+<p><p>Your <a href="matlab: modeladvisorprivate openSimprmAdvancedPage BoeingFigure8 'Real-Time Workshop'"> system target file</a> is <font color=#FF0000>grt.tlc</font>.&nbsp;&nbsp;Consider using <i>ert.tlc</i> or an ERT-based target, such as <i>mpc555_exp.tlc</i>, to generate final production code from this model.<p>You have not specified the <a href="matlab: modeladvisorprivate openSimprmAdvancedPage BoeingFigure8 'Hardware Implementation'"> Device type</a> configuration parameter for this model. This can lead to incorrect code being generated from the model.<p><p>Simulink and the Real-Time Workshop require two sets of target specifications. The first set describes the final intended production target. The second set describes the currently selected target. If the configurations do not match, the Real-Time Workshop generates extra code to emulate the behavior of the production target. This allows you, for example, to emulate the behavior of a 16-bit  production microprocessor on a 32-bit rapid-prototyping microprocessor.</p><p>It is extremely important that the two sets are the same for final production deployment of the code.</p><p>You are using the following specification:</p><table border="0" width="100%">  <tr>    <td width="33%" align="center"> </td>    <td width="33%" align="center"><a href="matlab: modeladvisorprivate openSimprmAdvancedPage BoeingFigure8 ">Embedded Hardware <br> (simulation and code generation)</a></td>    <td width="33%" align="center"><a href="matlab: modeladvisorprivate openSimprmAdvancedPage BoeingFigure8 ">Emulation Hardware <br> (code generation only)</a></td>  </tr>  <tr>    <td width="33%" align="left">C Type char (bits)</td>    <td width="33%" align="center"><font color=#FF0000><!-- mdladv_ignore_start -->8<!-- mdladv_ignore_finish --></font></td>    <td width="34%" align="center"><font color=#FF0000><!-- mdladv_ignore_start -->Unspecified<!-- mdladv_ignore_finish --></font></td>  </tr>  <tr>    <td width="33%" align="left">C Type short (bits)</td>    <td width="33%" align="center"><font color=#FF0000><!-- mdladv_ignore_start -->16<!-- mdladv_ignore_finish --></font></td>    <td width="34%" align="center"><font color=#FF0000><!-- mdladv_ignore_start -->Unspecified<!-- mdladv_ignore_finish --></font></td>  </tr>  <tr>    <td width="33%" align="left">C Type int (bits)</td>    <td width="33%" align="center"><font color=#FF0000><!-- mdladv_ignore_start -->32<!-- mdladv_ignore_finish --></font></td>    <td width="34%" align="center"><font color=#FF0000><!-- mdladv_ignore_start -->Unspecified<!-- mdladv_ignore_finish --></font></td>  </tr>  <tr>    <td width="33%" align="left">C Type long (bits)</td>    <td width="33%" align="center"><font color=#FF0000><!-- mdladv_ignore_start -->32<!-- mdladv_ignore_finish --></font></td>    <td width="34%" align="center"><font color=#FF0000><!-- mdladv_ignore_start -->Unspecified<!-- mdladv_ignore_finish --></font></td>  </tr>  <tr>    <td width="33%" align="left">Shift right on signed integer is implemented as arithmetic shift?</td>    <td width="33%" align="center"><!-- mdladv_ignore_start -->on<!-- mdladv_ignore_finish --></td>    <td width="34%" align="center"><!-- mdladv_ignore_start -->Unspecified<!-- mdladv_ignore_finish --></td>  </tr></table>
+<p><hr></p>  <A NAME="CheckRecord_8"</A><font size=+1><b>Check optimization settings</b></font>
+<p><p><p>You should turn on the following <a href="matlab: modeladvisorprivate openSimprmAdvancedPage BoeingFigure8 Optimization"> optimization</a>(s):<p><table border="0" width="100%"><tr> <td width="20%" align="center"> </td> <td width="80%" align="left"><li>Block reduction optimization</td></tr><tr> <td width="20%" align="center"> </td> <td width="80%" align="left"><li>Inline parameters</td></tr><tr> <td width="20%" align="center"> </td> <td width="80%" align="left"><li>Implement logic signals as boolean data</td></tr></table><br>
+<p><hr></p>  <A NAME="CheckRecord_9"</A><font size=+1><b>Identify questionable software environment specifications</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_10"</A><font size=+1><b>Identify questionable code instrumentation (data I/O)</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_11"</A><font size=+1><b>Check for blocks that have constraints on tunable parameters</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_12"</A><font size=+1><b>Check for parameter tunability information ignored by Simulink</b></font>
+<p><p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_13"</A><font size=+1><b>Check for implicit signal resolution</b></font>
+<p><p><P>The following models try to resolve all named signals and states to Simulink signal objects. Click on the links to turn off implicit signal resolution and enforce resolution for each of the signals and states that currently resolve successfully.<p><a href="matlab: modeladvisorprivate mdladv_mdlref DisableImplicitSignalResolution BoeingFigure8"> BoeingFigure8 </a>
+<p><hr></p>  <A NAME="CheckRecord_14"</A><font size=+1><b>Check for optimal bus virtuality</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_15"</A><font size=+1><b>Check for Discrete-Time Integrator blocks with initial condition uncertainty</b></font>
+<p><p><font color="#008000">Passed</font>
+<p><hr></p>  <A NAME="CheckRecord_16"</A><font size=+1><b>Identify questionable subsystem settings</b></font>
+<p><p><font color="#008000">Passed</font>
+
+</body>  
+</html>  

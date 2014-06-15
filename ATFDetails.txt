@@ -1,0 +1,21 @@
+Selected Option: xx1
+
+ATF Name: Simple agent example.
+
+Desc: Although all data from Simulink is forwarded to every agent 
+by the AgentCoordinator, here we are assuming each agent has its own associated signal. 
+Therefore, each agent only extracts their relevant element of data, share it with the other 
+agent, do their arithmetic and send the new data back to Simulink, again via the AgentCoordinator.
+
+In Simulink, use example.mdl.
+
+Agent: 1 
+Name: ssa
+Class path in package: example.SimpleSummationAgent
+
+Agent: 2 
+Name: sda
+Class path in package: example.SimpleDifferenceAgent
+
+MACSim inputs: 2, outputs: 2, sample rate (Hz):100
+
